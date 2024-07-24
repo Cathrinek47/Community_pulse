@@ -20,3 +20,7 @@ class Statistic(db.Model):
 
     def __repr__(self):
         return '<Statistic for Question %r: %r agree, %r disagree>' % (self.question_id, self.agree_count, self.disagree_count)
+
+
+
+
