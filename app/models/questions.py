@@ -22,5 +22,10 @@ class Statistic(db.Model):
         return '<Statistic for Question %r: %r agree, %r disagree>' % (self.question_id, self.agree_count, self.disagree_count)
 
 
+class Category(db.Model):
+    __tablename__ = 'Categories'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255), nullable=False)
+    question_id = db.Column(db.Integer, db.ForeignKey('questions.id'), nullable=False)
 
 
